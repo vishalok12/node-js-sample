@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Sample App</title>
+    <link rel="stylesheet" href="/css/todos.css">
+  </head>
+
+  <body>
+    <div id="todoapp">
+
+      <header>
+        <h1>Todos</h1>
+        <input id="new-todo" type="text" placeholder="What needs to be done?">
+      </header>
+
+      <section id="main" style="display: none;">
+        <ul id="todo-list"></ul>
+      </section>
+
+    </div>
+
+    <script type="text/javascript" src="/js/lib/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/lib/underscore.js"></script>
+    <script type="text/javascript" src="/js/lib/backbone.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <script type="text/template" id="item-template">
+      <div class="view">
+        <label><%- value %></label>
+        <a class="destroy"></a>
+      </div>
+      <input class="edit" type="text" value="<%- value %>" />
+    </script>
+
+  </body>
+</html>
